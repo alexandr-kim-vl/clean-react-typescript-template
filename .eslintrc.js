@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'airbnb',
@@ -29,7 +30,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['./webpack.*.ts'] },
+      { devDependencies: ['./webpack.*.ts', '**/*.test.ts', '**/*.test.tsx'] },
     ],
   },
 };
